@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    /* primary color */
+    --light_red: hsl(0, 100%, 67%);
+    --orangey_yellow: hsl(39, 100%, 56%);
+    --green_teal: hsl(166, 100%, 37%);
+    --cabalt_blue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+    --light_state_blue: hsl(252, 100%, 67%);
+    --light_royal_blue: hsl(241, 81%, 54%);
+
+    --violet_blue: hsla(256, 72%, 46%, 1);
+    --persian_blue: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --pale_blue: hsl(221, 100%, 96%);
+    --light_lavender: hsl(241, 100%, 89%);
+    --dark_grey_blue: hsl(224, 30%, 27%);
+
+    /* font-family */
+    --Hanken_Grotesk: 'Hanken Grotesk', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Hanken_Grotesk);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    /* max-width:  400px; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: non;
+}
+
+.result_section {
+    width: 100%;
+    height: 43%;
+    background: linear-gradient(var(--light_state_blue), var(--light_royal_blue));
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    gap: 1.2rem;
+    box-sizing: inherit;
+    padding: 1rem 0;
+}
+
+.result_section h3 {
+    color: var(--var--persian_blue);
+    opacity: 0.8;
+    font-size: 18px;
+}
+
+.circle {
+    height: 10rem;
+    width: 10rem;
+    background: linear-gradient(var(--violet_blue), var(--persian_blue));
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle h1 {
+    font-size: 3.4rem;
+    color: var(--white);
+}
+
+.circle p {
+    color: var(--light_lavender);
+    font-weight: bolder;
+}
+
+.result_section>h1 {
+    /* line-height: 0.8; */
+    font-size: 1.8rem;
+}
+
+.result_section>p {
+    font-size: 18px;
+    width: 80%;
+    text-align: center;
+    color: var(--light_lavender);
+    position: relative;
+    top: -13px;
+}
+
+.summary_section {
+    width: 100%;
+    height: 58%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    box-sizing: inherit;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    height: 66%;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card {
+    height: 18%;
+    width: 100%;
+    /* background-color: aqua; */
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.left img {
+    scale: 1.2;
+}
+
+.Reaction {
+    color: var(--light_red);
+    background-color: hsla(0, 100%, 67%, 0.070);
+}
+
+.Memory {
+    color: var(--orangey_yellow);
+    background-color: hsl(39, 100%, 56%, 0.070);
+}
+
+.Verbal {
+    color: var(--green_teal);
+    background-color: hsl(166, 100%, 37%, 0.070);
+}
+
+.Visual {
+    color: var(--cabalt_blue);
+    background-color: hsl(234, 85%, 45%, 0.070);
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--dark_grey_blue);
+}
+
+.right span:nth-child(2) {
+    color: hsla(224, 30%, 27%, 0.413);
+}
+
+button {
+    border: none;
+    width: 100%;
+    height: 12%;
+    background-color: var(--dark_grey_blue);
+    color: var(--white);
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: inherit;
+    }
+
+    main {
+        height: 60%;
+        width: 45%;
+        border-radius: 35px;
+        box-shadow: 0px 0px 30px hsla(224, 30%, 27%, 0.192);
+        ;
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+
+    .result_section,
+    .summary_section {
+        width: 50%;
+        height: 100%;
+        border-top-right-radius: 35px;
+    }
+
+    button:hover {
+        background: linear-gradient(var(--light_state_blue), var(--light_royal_blue));
+        cursor: pointer;
+    }
+}
